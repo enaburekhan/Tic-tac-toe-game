@@ -5,7 +5,7 @@ class Game
     attr_accessor :player1, :player2
   
     def player1turn(player1, player2)
-        prints "please enter a number: "
+        print "please enter a number: "
         player1number = gets.chomp
     end
   
@@ -30,8 +30,6 @@ class Game
         continue_play = true
   
         @board_state = ['unused', 1, 2, 3, 4, 5, 6, 7, 8, 9]
-        start = Board.new(@board_state)
-        start.display_board
   
         player1_win = false
         game_win = false
@@ -63,8 +61,4 @@ class Game
     end
   end
 
-#   game = Game.new()
-#  game.generate_players 
-# game.player2turn('eric', 'david')
- game.new_game
-  
+ 
