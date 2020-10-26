@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 # rubocop:disable Style/MultipleComparison
+# rubocop:disable Lint/LiteralAsCondition
 
 puts 'Welcome to tic tac toe game, Please enter your name one after the other'
 while true
@@ -11,7 +12,7 @@ while true
     puts "welcome #{player1} && #{player2}, happy gaming"
     break
   else
-    puts "Name tied couldn't be empty"
+    puts "Name tie, couldn't be empty"
   end
 end
 
@@ -87,3 +88,4 @@ until breakpoint.zero?
   break
 end
 # rubocop:enable Style/MultipleComparison
+# rubocop:enable Lint/LiteralAsCondition
