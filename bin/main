@@ -1,91 +1,89 @@
 #!/usr/bin/env ruby
- 
+# rubocop:disable Style/MultipleComparison
+
 puts 'Welcome to tic tac toe game, Please enter your name one after the other'
 while true
-        player_1 = gets.chomp
-        player_2 = gets.chomp
-    if player_1 == player_2
-        puts "Please enter a distinctive name"
-    elsif !player_1.empty? and !player_2.empty?
-          puts "welcome #{player_1} and #{player_2}, happy gaming"
-         break
-    else
-        puts "Name tied couldn't be empty"
-    end
+  player1 = gets.chomp
+  player2 = gets.chomp
+  if player1 == player2
+    puts 'Please enter a distinctive name'
+  elsif !player1.empty? && !player2.empty?
+    puts "welcome #{player1} && #{player2}, happy gaming"
+    break
+  else
+    puts "Name tied couldn't be empty"
+  end
 end
 
-board = [1,2,3,4,5,6,7,8,9]
+board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-board_1 = []
+board1 = []
 
 board_states = []
 
-board_2 = []
+board2 = []
 
 def game_board(board_states)
-    puts " #{board_states[0]} | #{board_states[1]} | #{board_states[2]} "
-    puts "-----------"
-    puts " #{board_states[3]} | #{board_states[4]} | #{board_states[5]} "
-    puts "-----------"
-    puts " #{board_states[6]} | #{board_states[7]} | #{board_states[8]} "
+  puts " #{board_states[0]} | #{board_states[1]} | #{board_states[2]} "
+  puts '-----------'
+  puts " #{board_states[3]} | #{board_states[4]} | #{board_states[5]} "
+  puts '-----------'
+  puts " #{board_states[6]} | #{board_states[7]} | #{board_states[8]} "
 end
 
 breakpoint = board.size
 
+until breakpoint.zero?
+  puts "#{player1} turn, please choose between #{board}"
 
+  game_board(board_states)
 
-until breakpoint == 0 do
-    puts "#{player_1} turn, please choose between #{board}"
-   
-    game_board(board_states)
-       
-    while true  
-        choice_1 = gets.chomp.to_i
-        if  board.include?(choice_1)
-            board_1 << choice_1
-            board_1.each {|state| board_states[state-1] = "X"} 
-            board.delete(choice_1)
-            breakpoint -= 1
-            break
-        else
-            puts "please choose between #{board}"
-        end   
+  loop do
+    choice1 = gets.chomp.to_i
+    if board.include?(choice1)
+      board1 << choice1
+      board1.each { |state| board_states[state - 1] = 'X' }
+      board.delete(choice1)
+      breakpoint -= 1
+      break
+    else
+      puts "please choose between #{board}"
     end
+  end
 
-    if breakpoint == 0
-        puts "the game ended in a draw"
-        break
-    end
-    game_board(board_states)
+  if breakpoint.zero?
+    puts 'the game ended in a draw'
+    break
+  end
+  game_board(board_states)
 
-    if board_1 == [1,2,3] || board_1 == [4,5,6] || board_1 == [7,8,9] || board_1 == [3,5,7] || board_1 ==[1,5,9] || board_1 == [3,2,1] || board_1 == [6,5,4] || board_1 == [9,8,7]
-        board_1.each {|state| board_states[state-1] = "X"} 
-        puts "#{player_1} win"
-        break
-    end
-    puts "#{player_2} turn please choose between #{board}"
-    
-    while true
-        choice_2 = gets.chomp.to_i
-        if  board.include?(choice_2)
-            board_2 << choice_2
-            board_2.each {|state| board_states[state-1] = "O"}
-            board.delete(choice_2)
-            breakpoint -= 1
-            break
-        else
-            puts "please choose between #{board}"
-        end
-    end
+  if board1 == [1, 2, 3] || board1 == [4, 5, 6] || board1 == [7, 8, 9] || board1 == [3, 5, 7] ||
+     board1 == [1, 5, 9] || board1 == [1, 4, 7] || board1 == [2, 5, 8] || board1 == [3, 6, 9]
+    board1.each { |state| board_states[state - 1] = 'X' }
+    puts "#{player1} win"
+    break
+  end
+  puts "#{player2} turn please choose between #{board}"
 
-    game_board(board_states)
-    
-    if board_2 == [1,2,3] || board_2 == [4,5,6] || board_2 == [7,8,9] || board_2 == [3,5,7] || board_2 == [1,5,9] || board_2 == [3,2,1] || board_2 == [6,5,4] || board_2 == [9,8,7]
-        puts "#{player_2} win"
-        break
+  loop do
+    choice2 = gets.chomp.to_i
+    if board.include?(choice2)
+      board2 << choice2
+      board2.each { |state| board_states[state - 1] = 'O' }
+      board.delete(choice2)
+      breakpoint -= 1
+      break
+    else
+      puts "please choose between #{board}"
     end
+  end
+
+  game_board(board_states)
+
+  next unless board2 == [1, 2, 3] || board2 == [4, 5, 6] || board2 == [7, 8, 9] || board2 == [3, 5, 7] ||
+              board2 == [1, 5, 9] || board2 == [1, 4, 7] || board2 == [2, 5, 8] || board2 == [3, 6, 9]
+
+  puts "#{player2} win"
+  break
 end
-
-
-
- 
+# rubocop:enable Style/MultipleComparison
