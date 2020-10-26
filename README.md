@@ -1,12 +1,12 @@
 # Tic-tac-toe-game
-In this project. The main goal is to create two main directories:
-- lib- for the game logic then add the .gitkeep file since the directory is empty
-- bin- with the executable file called main
+In this project. The main goal is to create a class called Game class with methods that only interacts with players. Such methods include:
+- player1turn
+- player2turn
+- generate_players, and
+- new_game
 
-# Milestone 1: Project setup
+# Milestone 2: User interface
 
-- lib
-- bin
 - main
 
 ## Built With
@@ -16,7 +16,7 @@ In this project. The main goal is to create two main directories:
 
 ## Getting Started
 
-This project involves creating the bin with executable main file  and lib directories.
+This project involves creating the Game class with methods that only interacts with the players.
 
 ### Prerequisites
 
