@@ -1,35 +1,83 @@
 #!/usr/bin/env ruby
 
-class player 
-
-def player1
-  puts "What is your name:"
-  player = gets.chomp
-end
-
-def player2 
- puts "What is your name:"
- player = gets.chomp
-end
-
-
-def game
+# game class
+class Game
+    attr_accessor :player1, :player2
   
-end
+    def player1turn(player1, player2)
+      print "\n#{player1.name}, please enter a number: "
+    #   player_choice = player1.get_input(@board_state)
+    #   current = GamePlay.turn(@board_state, player1, player_choice)
+    #   if current == true
+    #     player1_win = true
+    #     game_win = true
+    #     GamePlay.game_over(player1_win, game_win, player1.name, @player2.name)
+    #   end
+    #   current == true ? true : false
+    end
+  
+    def player2turn(player1, player2)
+      print "\n#{player2.name}, please enter a number: "
+    #   player_choice = player2.get_input(@board_state)
+    #   current = GamePlay.turn(@board_state, player2, player_choice)
+    #   if current == true
+    #     player1_win = false
+    #     game_win = true
+    #     GamePlay.game_over(player1_win, game_win, player1.name, player2.name)
+    #   end
+    #   current == true ? true : false
+    end
+  
+    def generate_players
+      puts "Welcome! Let's set you two up for a nice little game of Tic Tac Toe."
+      print "\nPlease enter the first player's name: "
+      player1name = gets.chomp
+    #   @player1 = Player.new(player1name)
+      print "Please enter the second player's name: "
+      player2name = gets.chomp
+    #   @player2 = Player.new(player2name)
+    puts "Now we are ready to play the game"
+    end
+  
+    # def new_game
+    #   generate_players
+  
+    #   loop do
+    #     continue_play = true
+  
+    #     @board_state = ['unused', 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    #     start = Board.new(@board_state)
+    #     start.display_board
+  
+    #     player1_win = false
+    #     game_win = false
+    #     for i in 1..9
+    #       if i % 2 != 0
+    #         won = player1turn(@player1, @player2)
+    #         break if won
+    #       else
+    #         won = player2turn(@player1, @player2)
+    #         break if won
+    #       end
+    #     end
+  
+    #     if won == false
+    #       GamePlay.game_over(player1_win, game_win, player1.name, player2.name)
+    #     end
+  
+    #     loop do
+    #       replay = GamePlay.replay_choice
+    #       if replay == true || replay == false
+    #         continue_play = replay
+    #         break
+    #       end
+    #     end
+        
+    #     break if continue_play == false
+  
+    #   end
+    # end
+  end
 
-
-def score
-
-end
-
-def win
-  put
-end
-
-def lose
-
-end
-
-def tie
-
-end
+  game = Game.new()
+  game.generate_players 
