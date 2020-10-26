@@ -1,66 +1,91 @@
 #!/usr/bin/env ruby
-
-# game class
-# rubocop:disable Style/IdenticalConditionalBranches
-# rubocop:disable Metrics/MethodLength
-class Game
-  attr_accessor :player1, :player2
-
-  def player1turn(_player1, _player2)
-    print 'please enter a number: '
-    player1number = gets.chomp
-    puts "I hope #{player1number} is a lucky number"
-  end
-
-  def player2turn(_player1, _player2)
-    print 'please enter a number: '
-    player2number = gets.chomp
-    puts "I hope #{player2number} is a lucky number"
-  end
-
-  def generate_players
-    puts "Welcome! Let's set you two up for a nice little game of Tic Tac Toe."
-    print "\nPlease enter the first player's name: "
-    player1name = gets.chomp
-    puts "Welcome #{player1name}, let's see how good you are!"
-    print "Please enter the second player's name: "
-    player2name = gets.chomp
-    puts "Welcome #{player2name}, let's see how good you are!"
-    puts 'Now we are ready to play the game'
-  end
-
-  def new_game
-    generate_players
-
-    loop do
-      continue_play = true
-
-      @board_state = ['unused', 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-      player1_win = false
-      game_win = false
-      (1..9).each do |i|
-        if i.odd?
-          win = player1turn(@player1, @player2)
-          break if win
-        else
-          win = player2turn(@player1, @player2)
-          break if win
-        end
-      end
-
-      GamePlay.game_over(player1_win, game_win, player1.name, player2.name) if win == false
-
-      loop do
-        replay = GamePlay.replay_choice
-        replay.include?
-        continue_play = replay
-        break
-      end
-      break if continue_play == false
+ 
+puts 'Welcome to tic tac toe game, Please enter your name one after the other'
+while true
+        player_1 = gets.chomp
+        player_2 = gets.chomp
+    if player_1 == player_2
+        puts "Please enter a distinctive name"
+    elsif !player_1.empty? and !player_2.empty?
+          puts "welcome #{player_1} and #{player_2}, happy gaming"
+         break
+    else
+        puts "Name tied couldn't be empty"
     end
-  end
 end
 
-# rubocop:enable Metrics/MethodLength
-# rubocop:enable Style/IdenticalConditionalBranches
+board = [1,2,3,4,5,6,7,8,9]
+
+board_1 = []
+
+board_states = []
+
+board_2 = []
+
+def game_board(board_states)
+    puts " #{board_states[0]} | #{board_states[1]} | #{board_states[2]} "
+    puts "-----------"
+    puts " #{board_states[3]} | #{board_states[4]} | #{board_states[5]} "
+    puts "-----------"
+    puts " #{board_states[6]} | #{board_states[7]} | #{board_states[8]} "
+end
+
+breakpoint = board.size
+
+
+
+until breakpoint == 0 do
+    puts "#{player_1} turn, please choose between #{board}"
+   
+    game_board(board_states)
+       
+    while true  
+        choice_1 = gets.chomp.to_i
+        if  board.include?(choice_1)
+            board_1 << choice_1
+            board_1.each {|state| board_states[state-1] = "X"} 
+            board.delete(choice_1)
+            breakpoint -= 1
+            break
+        else
+            puts "please choose between #{board}"
+        end   
+    end
+
+    if breakpoint == 0
+        puts "the game ended in a draw"
+        break
+    end
+    game_board(board_states)
+
+    if board_1 == [1,2,3] || board_1 == [4,5,6] || board_1 == [7,8,9] || board_1 == [3,5,7] || board_1 ==[1,5,9] || board_1 == [3,2,1] || board_1 == [6,5,4] || board_1 == [9,8,7]
+        board_1.each {|state| board_states[state-1] = "X"} 
+        puts "#{player_1} win"
+        break
+    end
+    puts "#{player_2} turn please choose between #{board}"
+    
+    while true
+        choice_2 = gets.chomp.to_i
+        if  board.include?(choice_2)
+            board_2 << choice_2
+            board_2.each {|state| board_states[state-1] = "O"}
+            board.delete(choice_2)
+            breakpoint -= 1
+            break
+        else
+            puts "please choose between #{board}"
+        end
+    end
+
+    game_board(board_states)
+    
+    if board_2 == [1,2,3] || board_2 == [4,5,6] || board_2 == [7,8,9] || board_2 == [3,5,7] || board_2 == [1,5,9] || board_2 == [3,2,1] || board_2 == [6,5,4] || board_2 == [9,8,7]
+        puts "#{player_2} win"
+        break
+    end
+end
+
+
+
+ 
