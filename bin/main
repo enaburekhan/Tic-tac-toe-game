@@ -1,3 +1,35 @@
 #!/usr/bin/env ruby
 
-puts 'Hello world!'
+class player 
+
+def player1
+  puts "What is your name:"
+  player = gets.chomp
+end
+
+def player2 
+ puts "What is your name:"
+ player = gets.chomp
+end
+
+
+def game
+  
+end
+
+
+def score
+
+end
+
+def win
+  put
+end
+
+def lose
+
+end
+
+def tie
+
+end
