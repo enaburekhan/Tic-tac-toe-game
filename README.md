@@ -1,16 +1,20 @@
 # Tic-tac-toe-game
-![onlineCodingDirectory-screen-shot](./readme.png)
+In this project, the student builds a Tic Tac Toe game. The main goal is to put into practice the main concepts of Object Oriented Programming. Particularly, classes and access to their attributes.
 
+# Milestone 1: Project setup
+
+- bin
+- lib
+- main
 
 ## Built With
 
 - Ruby
 
 
-
 ## Getting Started
 
-This project involves creating custom enumerables methods to emulate the regular ruby enumerables in terms of functionality. 
+This project involves creating the bin and lib directories.
 
 ### Prerequisites
 
@@ -20,12 +24,11 @@ To get this project up and running, you must have Ruby installed on your machine
 
 **To get this project set up on your local machine, follow these simple steps:**
 
-- Clone the github repository https://github.com/enaburekhan/enumerables-project/tree/feature-branch on your local machine
+- Clone the github repository https://github.com/enaburekhan/Tic-tac-toe-game.git on your local machine
 - Cd into the clone folder
 - Add Ruby github/workflows
 - Install ruby extension pack on your IDE or code editor
-- After creating the various custom enumerables method on the clone folder.
-- Run main.rb to execute the script file
+- Run main to execute the script file
 - Run rubocop on your working folder and fix errors
 - stage, commit, push to the created remote branch(feature-branch) on github and create a pull request.
 
@@ -38,17 +41,15 @@ To get this project up and running, you must have Ruby installed on your machine
 - Twitter: [@enaburekhaneric](https://twitter.com/enaburekhaneric)
 - Linkedin: [@ericenaburekhan](https://www.linkedin.com/in/eric-enaburekhan-801a28100/)
 
-👤 **David Yao**
+👤 **Tshepo David Molefe**
 
-- Github: [@daviidy](https://github.com/daviidy )
-- Twitter: [@DavidYao3](https://twitter.com/DavidYao3)
-- Linkedin: [@DavidYao](https://www.linkedin.com/in/david-yao-6bb95299/ 
-daviidy )
-
+- Github: [@tshepo](https://github.com/TSHEPO-CLOUD)
+- Twitter: [@tshepo](https://twitter.com/tshepomolefe)
+- Linkedin: [TSHEPO MOLEFE](https://linkedin.com/tshepo-molefe)
 
 ## Show your support
 
-If you've read this far, pls give us a ⭐️!
+Give a ⭐️ on Github if you like this project!
 
 ## Acknowledgments
 
