@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
-# frozen_string_literal: true
 
 # game class
 # rubocop:disable Style/IdenticalConditionalBranches
+# rubocop:disable Metrics/MethodLength
 class Game
   attr_accessor :player1, :player2
 
@@ -62,4 +62,5 @@ class Game
   end
 end
 
+# rubocop:enable Metrics/MethodLength
 # rubocop:enable Style/IdenticalConditionalBranches
