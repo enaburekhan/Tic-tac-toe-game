@@ -1,64 +1,65 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
 # game class
+# rubocop:disable Style/IdenticalConditionalBranches
 class Game
-    attr_accessor :player1, :player2
-  
-    def player1turn(player1, player2)
-        print "please enter a number: "
-        player1number = gets.chomp
-    end
-  
-    def player2turn(player1, player2)
-        print "please enter a number: "
-        player2number = gets.chomp
-    end
-  
-    def generate_players
-      puts "Welcome! Let's set you two up for a nice little game of Tic Tac Toe."
-      print "\nPlease enter the first player's name: "
-      player1name = gets.chomp
-      print "Please enter the second player's name: "
-      player2name = gets.chomp
-    puts "Now we are ready to play the game"
-    end
-  
-    def new_game
-      generate_players
-  
-      loop do
-        continue_play = true
-  
-        @board_state = ['unused', 1, 2, 3, 4, 5, 6, 7, 8, 9]
-  
-        player1_win = false
-        game_win = false
-        for i in 1..9
-          if i % 2 != 0
-            win = player1turn(@player1, @player2)
-            break if win
-          else
-            win = player2turn(@player1, @player2)
-            break if win
-          end
-        end
-  
-        if win == false
-          GamePlay.game_over(player1_win, game_win, player1.name, player2.name)
-        end
-  
-        loop do
-          replay = GamePlay.replay_choice
-          if replay == true || replay == false
-            continue_play = replay
-            break
-          end
-        end
-        
-        break if continue_play == false
-  
-      end
-    end
+  attr_accessor :player1, :player2
+
+  def player1turn(_player1, _player2)
+    print 'please enter a number: '
+    player1number = gets.chomp
+    puts "I hope #{player1number} is a lucky number"
   end
 
- 
+  def player2turn(_player1, _player2)
+    print 'please enter a number: '
+    player2number = gets.chomp
+    puts "I hope #{player2number} is a lucky number"
+  end
+
+  def generate_players
+    puts "Welcome! Let's set you two up for a nice little game of Tic Tac Toe."
+    print "\nPlease enter the first player's name: "
+    player1name = gets.chomp
+    puts "Welcome #{player1name}, let's see how good you are!"
+    print "Please enter the second player's name: "
+    player2name = gets.chomp
+    puts "Welcome #{player2name}, let's see how good you are!"
+    puts 'Now we are ready to play the game'
+  end
+
+  def new_game
+    generate_players
+
+    loop do
+      continue_play = true
+
+      @board_state = ['unused', 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+      player1_win = false
+      game_win = false
+      (1..9).each do |i|
+        if i.odd?
+          win = player1turn(@player1, @player2)
+          break if win
+        else
+          win = player2turn(@player1, @player2)
+          break if win
+        end
+      end
+
+      GamePlay.game_over(player1_win, game_win, player1.name, player2.name) if win == false
+
+      loop do
+        replay = GamePlay.replay_choice
+        replay.include?
+        continue_play = replay
+        break
+      end
+      break if continue_play == false
+    end
+  end
+end
+
+# rubocop:enable Style/IdenticalConditionalBranches
