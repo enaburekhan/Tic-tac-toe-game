@@ -1,10 +1,12 @@
 # Tic-tac-toe-game
-In this project, the student builds a Tic Tac Toe game. The main goal is to put into practice the main concepts of Object Oriented Programming. Particularly, classes and access to their attributes.
-And we add lib folder which contains .gitkeep file  - for the game logic.
+In this project setup. The main goal is to create two main directories:
+- lib- for the game logic then add the .gitkeep file since the directory is empty
+- bin- with the executable file called main
+
 # Milestone 1: Project setup
 
-- bin
 - lib
+- bin
 - main
 
 ## Built With
@@ -14,7 +16,7 @@ And we add lib folder which contains .gitkeep file  - for the game logic.
 
 ## Getting Started
 
-This project involves creating the bin and lib directories.
+This project involves creating the bin with executable main file  and lib directories.
 
 ### Prerequisites
 
