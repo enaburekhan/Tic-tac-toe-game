@@ -1,9 +1,6 @@
 # Tic-tac-toe-game
-In this project. The main goal is to create a class called Game class with methods that only interacts with players. Such methods include:
-- player1turn
-- player2turn
-- generate_players, and
-- new_game
+In this project. The main goal is to create steps required to play the game. It begins with requesting for the players names, creating a board and displaying the board states and determining and displaying the winner or the draw if it ends in a tie.
+
 
 # Milestone 2: User interface
 
