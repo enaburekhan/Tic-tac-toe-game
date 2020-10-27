@@ -1,18 +1,16 @@
 #!/usr/bin/env ruby
-# rubocop:disable Style/MultipleComparison
-# rubocop:disable Lint/LiteralAsCondition
 
 puts 'Welcome to tic tac toe game, Please enter your name one after the other'
-while true
+
+game_on = true
+while game_on
   player1 = gets.chomp
   player2 = gets.chomp
   if player1 == player2
-    puts 'Please enter a distinctive name'
-  elsif !player1.empty? && !player2.empty?
+    puts 'please enter a distinctive name'
+  else
     puts "welcome #{player1} && #{player2}, happy gaming"
     break
-  else
-    puts "Name tie, couldn't be empty"
   end
 end
 
@@ -58,12 +56,13 @@ until breakpoint.zero?
   end
   game_board(board_states)
 
-  if board1 == [1, 2, 3] || board1 == [4, 5, 6] || board1 == [7, 8, 9] || board1 == [3, 5, 7] ||
-     board1 == [1, 5, 9] || board1 == [1, 4, 7] || board1 == [2, 5, 8] || board1 == [3, 6, 9]
+  states = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [3, 5, 7], [1, 5, 9], [1, 4, 7], [2, 5, 8], [3, 6, 9]]
+  if states.include?(board1)
     board1.each { |state| board_states[state - 1] = 'X' }
     puts "#{player1} win"
     break
   end
+
   puts "#{player2} turn please choose between #{board}"
 
   loop do
@@ -81,11 +80,11 @@ until breakpoint.zero?
 
   game_board(board_states)
 
-  next unless board2 == [1, 2, 3] || board2 == [4, 5, 6] || board2 == [7, 8, 9] || board2 == [3, 5, 7] ||
-              board2 == [1, 5, 9] || board2 == [1, 4, 7] || board2 == [2, 5, 8] || board2 == [3, 6, 9]
+  states = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [3, 5, 7], [1, 5, 9], [1, 4, 7], [2, 5, 8], [3, 6, 9]]
+  next unless states.include?(board2)
 
+  board2.each { |state| board_states[state - 1] = 'X' }
   puts "#{player2} win"
   break
+
 end
-# rubocop:enable Style/MultipleComparison
-# rubocop:enable Lint/LiteralAsCondition
