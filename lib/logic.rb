@@ -1,40 +1,54 @@
-# logic defines player's winning position
-class Logic
+# logic defines how to play the game
+class Game
+  attr_accessor :choice, :board  
   attr_reader :player_position
-  def initialize(player_position)
+  def initialize(choice, board, player_position)
+    @choice = choice
+    @board = board
     @player_position = player_position
   end
 
-  def winning_position?
-    arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 4, 7], [2, 5, 8], [3, 6, 9], [1, 5, 9], [3, 5, 7]]
-    arr.any? do |combination|
-      return true if combination.all? { |element| @player_position.include?(element) }
+
+  def draw?(board)
+    if !won?(board) && full?(board)
+    return true
+    elsif!full?(board) && !won?(board)
+    return false
+    else won?(board)
+    return false
     end
-    false
+  end
+
+  def position
+    def inside
+      @board.include?(@choice)
+    end
   end
 end
 
-# logic defines player's position on the board
-class Position
-  attr_accessor :choice, :board
-  def initialize(choice, board)
-    @choice = choice
-    @board = board
+# Logic defines board attributes
+class Board
+    attr_accessor :states
+  def initialize(states)
+    @states = states
   end
 
-  def inside
-    @board.include?(@choice)
+  def initial_board
+    puts ' 1 | 2 | 3'
+    puts '-----------'
+    puts ' 4 | 5 | 6 '
+    puts '-----------'
+    puts ' 7 | 8 | 9 '
   end
 end
 
-# defines array operation
-class ArrayOperation
-  def initialize(arr, pos)
-    @arr = arr
-    @pos = pos
-  end
-
-  def delete_arr
-    @arr.delete(@pos)
+# Logic defines players attributes
+class Players
+  attr_accessor :name
+  def initialize(name)
+    @name = name
   end
 end
+
+
+
