@@ -1,5 +1,9 @@
 #!/usr/bin/env ruby
 
+require_relative '../lib/game.rb'
+require_relative '../lib/board.rb'
+require_relative '../lib/player.rb'
+
 puts 'Welcome to tic tac toe game, Please enter your name one after the other'
 
 game_on = true
@@ -8,9 +12,11 @@ while game_on
   player2 = gets.chomp
   if player1 == player2
     puts 'please enter a distinctive name'
-  else
+  elsif !player1.empty? && !player2.empty?
     puts "welcome #{player1} && #{player2}, happy gaming"
     break
+  else
+    puts "Name tie, couldn't be empty"
   end
 end
 
@@ -21,14 +27,6 @@ board1 = []
 board_states = []
 
 board2 = []
-
-def game_board(board_states)
-  puts " #{board_states[0]} | #{board_states[1]} | #{board_states[2]} "
-  puts '-----------'
-  puts " #{board_states[3]} | #{board_states[4]} | #{board_states[5]} "
-  puts '-----------'
-  puts " #{board_states[6]} | #{board_states[7]} | #{board_states[8]} "
-end
 
 breakpoint = board.size
 
@@ -55,7 +53,6 @@ until breakpoint.zero?
     break
   end
   game_board(board_states)
-
   states = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [3, 5, 7], [1, 5, 9], [1, 4, 7], [2, 5, 8], [3, 6, 9]]
   if states.include?(board1)
     board1.each { |state| board_states[state - 1] = 'X' }
