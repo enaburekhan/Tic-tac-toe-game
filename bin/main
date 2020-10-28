@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
+require_relative '../lib/logic'
 puts 'Welcome to tic tac toe game, Please enter your name one after the other'
 
 game_on = true
