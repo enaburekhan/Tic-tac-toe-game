@@ -21,6 +21,7 @@ class Position
     @choice = choice
     @board  = board
   end  
+  
   def inside
     @board.include?(@choice)
   end

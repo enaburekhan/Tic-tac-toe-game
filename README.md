@@ -1,8 +1,11 @@
 # Tic-tac-toe-game
-In this project. The main goal is to create steps required to play the game. It begins with requesting for the players names, creating a board and displaying the board states and determining and displaying the winner or the draw if it ends in a tie.
+In this project. The main goal is to create the various logics  required to play the game. We created three classes:
+- Logic
+- Position
+- ArrayOperation
+These three class houses the various method logic required to play the play the game. 
 
-
-# Milestone 2: User interface
+# Milestone 2: Game_logic
 
 - main
 
@@ -13,7 +16,7 @@ In this project. The main goal is to create steps required to play the game. It 
 
 ## Getting Started
 
-This project involves creating the Game class with methods that only interacts with the players.
+This project involves creating the Logic class with methods required by players to play the game.
 
 ### Prerequisites
 
