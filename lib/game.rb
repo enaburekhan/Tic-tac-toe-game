@@ -1,5 +1,3 @@
-
-
 def game_board(board_states)
   puts " #{board_states[0]} | #{board_states[1]} | #{board_states[2]} "
   puts '-----------'

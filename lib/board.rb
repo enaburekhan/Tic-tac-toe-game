@@ -1,5 +1,3 @@
-
-
 # Logic defines board attributes
 class Board
   attr_accessor :states

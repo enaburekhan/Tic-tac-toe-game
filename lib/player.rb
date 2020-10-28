@@ -1,5 +1,3 @@
-
-
 # Logic defines players attributes
 class Players
   attr_accessor :name
