@@ -1,6 +1,6 @@
 # logic defines how to play the game
 class Game
-  attr_accessor :choice, :board  
+  attr_accessor :choice, :board
   attr_reader :player_position
   def initialize(choice, board, player_position)
     @choice = choice
@@ -8,27 +8,24 @@ class Game
     @player_position = player_position
   end
 
-
   def draw?(board)
     if !won?(board) && full?(board)
-    return true
-    elsif!full?(board) && !won?(board)
-    return false
-    else won?(board)
-    return false
+      true
+    elsif full?(board) && !won?(board)
+      false
+    elsif won?(board)
+      false
     end
   end
 
-  def position
-    def inside
-      @board.include?(@choice)
-    end
+  def inside
+    @board.include?(@choice)
   end
 end
 
 # Logic defines board attributes
 class Board
-    attr_accessor :states
+  attr_accessor :states
   def initialize(states)
     @states = states
   end
@@ -49,6 +46,3 @@ class Players
     @name = name
   end
 end
-
-
-
