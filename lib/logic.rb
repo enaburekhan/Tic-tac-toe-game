@@ -1,4 +1,4 @@
-# logic class
+# logic defines player's winning position
 class Logic
   attr_reader :player_position
   def initialize(player_position)
@@ -14,7 +14,7 @@ class Logic
   end 
 end
 
-# class position
+# logic defines player's position on the board
 class Position
   attr_accessor :choice, :board
   def initialize(choice, board)
@@ -26,7 +26,7 @@ class Position
   end
 end
 
-# Array operation class
+# defines array operation
 class ArrayOperation
   def initialize(arr, pos)
     @arr = arr
