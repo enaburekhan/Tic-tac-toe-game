@@ -8,9 +8,11 @@ while game_on
   player2 = gets.chomp
   if player1 == player2
     puts 'please enter a distinctive name'
-  else
+  elsif !player1.empty? && !player2.empty?
     puts "welcome #{player1} && #{player2}, happy gaming"
     break
+  else
+    puts "Name tie, couldn't be empty"
   end
 end
 
