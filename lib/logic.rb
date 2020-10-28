@@ -19,7 +19,7 @@ class Position
   attr_accessor :choice, :board
   def initialize(choice, board)
     @choice = choice
-    @board  = board
+    @board = board
   end
 
   def inside
