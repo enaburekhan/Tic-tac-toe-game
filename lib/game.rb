@@ -1,3 +1,13 @@
+# frozen_string_literal: true
+
+def game_board(board_states)
+  puts " #{board_states[0]} | #{board_states[1]} | #{board_states[2]} "
+  puts '-----------'
+  puts " #{board_states[3]} | #{board_states[4]} | #{board_states[5]} "
+  puts '-----------'
+  puts " #{board_states[6]} | #{board_states[7]} | #{board_states[8]} "
+end
+
 # logic defines how to play the game
 class Game
   attr_accessor :choice, :board
@@ -20,29 +30,5 @@ class Game
 
   def inside
     @board.include?(@choice)
-  end
-end
-
-# Logic defines board attributes
-class Board
-  attr_accessor :states
-  def initialize(states)
-    @states = states
-  end
-
-  def initial_board
-    puts ' 1 | 2 | 3'
-    puts '-----------'
-    puts ' 4 | 5 | 6 '
-    puts '-----------'
-    puts ' 7 | 8 | 9 '
-  end
-end
-
-# Logic defines players attributes
-class Players
-  attr_accessor :name
-  def initialize(name)
-    @name = name
   end
 end

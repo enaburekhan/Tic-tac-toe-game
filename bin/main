@@ -1,6 +1,9 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
-require_relative '../lib/logic.rb'
+require_relative '../lib/game.rb'
+require_relative '../lib/board.rb'
+require_relative '../lib/player.rb'
 
 puts 'Welcome to tic tac toe game, Please enter your name one after the other'
 
@@ -25,14 +28,6 @@ board1 = []
 board_states = []
 
 board2 = []
-
-def game_board(board_states)
-  puts " #{board_states[0]} | #{board_states[1]} | #{board_states[2]} "
-  puts '-----------'
-  puts " #{board_states[3]} | #{board_states[4]} | #{board_states[5]} "
-  puts '-----------'
-  puts " #{board_states[6]} | #{board_states[7]} | #{board_states[8]} "
-end
 
 breakpoint = board.size
 
