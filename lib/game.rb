@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def game_board(board_states)
   puts " #{board_states[0]} | #{board_states[1]} | #{board_states[2]} "
   puts '-----------'
@@ -28,5 +30,5 @@ class Game
 
   def inside
     @board.include?(@choice)
-  end  
+  end
 end

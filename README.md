@@ -29,7 +29,7 @@ The main goal of this project is to ensure the mastery of the methods ruby provi
 
 ## How to install
 
-- Download or clone the repository's files using git@github.com:enaburekhan/Tic-tac-toe-game.git
+- Download or clone the repository's files using https://github.com/enaburekhan/Tic-tac-toe-game.git
 - Have Ruby 2.7 installed
 - Once repo is downloaded to local directory in you console 
 - Cd into the local directory and run cmd: main

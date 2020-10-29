@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
 require_relative '../lib/game.rb'
 require_relative '../lib/board.rb'
@@ -28,7 +29,7 @@ board_states = []
 
 board2 = []
 
- breakpoint = board.size
+breakpoint = board.size
 
 until breakpoint.zero?
   puts "#{player1} turn, please choose between #{board}"

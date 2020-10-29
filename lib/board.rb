@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Logic defines board attributes
 class Board
   attr_accessor :states
