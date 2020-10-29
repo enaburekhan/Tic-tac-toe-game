@@ -1,40 +1,42 @@
-# Tic-tac-toe-game
-In this project. The main goal is to create the various logics  required to play the game. We created three classes:
-- Logic
-- Position
-- ArrayOperation
-These three class houses the various method logic required to play the play the game. 
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Milestone 2: Game_logic
+# OOPs-tic-tac-toe
 
-- main
+> In this project, we're required to create a Tic Tac Toe Game using Ruby with OOP concepts.
 
-## Built With
+This project is split into 4 milestones, which are:
 
-- Ruby
+- Setting up the project
+- Designing the user interface
+- Creating the game logic
+- Writing the game instructions
 
+The main goal of this project is to ensure the mastery of the methods ruby provides and to learn how to replicate them using basic coding knowledge.
 
-## Getting Started
+Below is a basic demonstration of how the tic tac toe game works
 
-This project involves creating the Logic class with methods required by players to play the game.
+![screenshot](./assets/gif.gif)
 
-### Prerequisites
+## Steps to play the game : 
 
-To get this project up and running, you must have Ruby installed on your machine.
+- Player 1 is assigned the key 'X' and Player 2 is assigned the key '0'.
 
-### Installation
+- The game starts with an empty board.
 
-**To get this project set up on your local machine, follow these simple steps:**
+- Players are prompt to enter the position for their respective key.
 
-- Clone the github repository https://github.com/enaburekhan/Tic-tac-toe-game.git on your local machine
-- Cd into the clone folder
-- Add Ruby github/workflows
-- Install ruby extension pack on your IDE or code editor
-- Run main to execute the script file
-- Run rubocop on your working folder and fix errors
-- stage, commit, push to the created remote branch(feature-branch) on github and create a pull request.
+- The game continues until we have a winning combination or the grid is full and it is a draw.
 
+- Winning combinations are full row, full column or full diagonal.
 
+## How to install
+
+- Download or clone the repository's files github repo
+- Have Ruby 2.7 installed
+- Once repo is downloaded to local directory, in you console run cmd: main
+- Enjoy the game!
+
+## Screenshot
 ## Author
 
 👤 **Eric Enaburekhan**
