@@ -13,30 +13,28 @@ This project is split into 4 milestones, which are:
 
 The main goal of this project is to ensure the mastery of the methods ruby provides and to learn how to replicate them using basic coding knowledge.
 
-Below is a basic demonstration of how the tic tac toe game works
-
-![screenshot](./assets/gif.gif)
+![screenshot](./readme.png)
 
 ## Steps to play the game : 
 
-- Player 1 is assigned the key 'X' and Player 2 is assigned the key '0'.
+- Two players starts with a blank board of 9 spaces on a 3 x 3 grid.
 
-- The game starts with an empty board.
+- Each play takes turn to place either an "X" or "O"(a marker) on the board.
 
-- Players are prompt to enter the position for their respective key.
+- The game is won when one player achieve three markers in a row-horizontally, vertically, or diagonally.
 
-- The game continues until we have a winning combination or the grid is full and it is a draw.
+- The game is draw when the board is full and there is no winning moves.
 
-- Winning combinations are full row, full column or full diagonal.
+- The program needs to guide players along the way and announce the winner if game is won.
 
 ## How to install
 
-- Download or clone the repository's files github repo
+- Download or clone the repository's files using git@github.com:enaburekhan/Tic-tac-toe-game.git
 - Have Ruby 2.7 installed
-- Once repo is downloaded to local directory, in you console run cmd: main
+- Once repo is downloaded to local directory in you console 
+- Cd into the local directory and run cmd: main
 - Enjoy the game!
 
-## Screenshot
 ## Author
 
 👤 **Eric Enaburekhan**
