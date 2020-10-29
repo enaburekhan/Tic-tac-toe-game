@@ -28,5 +28,5 @@ class Game
 
   def inside
     @board.include?(@choice)
-  end
+  end  
 end

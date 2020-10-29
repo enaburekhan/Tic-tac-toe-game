@@ -28,7 +28,7 @@ board_states = []
 
 board2 = []
 
-breakpoint = board.size
+ breakpoint = board.size
 
 until breakpoint.zero?
   puts "#{player1} turn, please choose between #{board}"
