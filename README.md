@@ -1,39 +1,39 @@
-# Tic-tac-toe-game
-In this project. The main goal is to create the various logics  required to play the game. We created three classes:
-- Logic
-- Position
-- ArrayOperation
-These three class houses the various method logic required to play the play the game. 
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Milestone 2: Game_logic
+# OOPs-tic-tac-toe
 
-- main
+> In this project, we're required to create a Tic Tac Toe Game using Ruby with OOP concepts.
 
-## Built With
+This project is split into 4 milestones, which are:
 
-- Ruby
+- Setting up the project
+- Designing the user interface
+- Creating the game logic
+- Writing the game instructions
 
+The main goal of this project is to ensure the mastery of the methods ruby provides and to learn how to replicate them using basic coding knowledge.
 
-## Getting Started
+![screenshot](./readme.png)
 
-This project involves creating the Logic class with methods required by players to play the game.
+## Steps to play the game : 
 
-### Prerequisites
+- Two players starts with a blank board of 9 spaces on a 3 x 3 grid.
 
-To get this project up and running, you must have Ruby installed on your machine.
+- Each play takes turn to place either an "X" or "O"(a marker) on the board.
 
-### Installation
+- The game is won when one player achieve three markers in a row-horizontally, vertically, or diagonally.
 
-**To get this project set up on your local machine, follow these simple steps:**
+- The game is draw when the board is full and there is no winning moves.
 
-- Clone the github repository https://github.com/enaburekhan/Tic-tac-toe-game.git on your local machine
-- Cd into the clone folder
-- Add Ruby github/workflows
-- Install ruby extension pack on your IDE or code editor
-- Run main to execute the script file
-- Run rubocop on your working folder and fix errors
-- stage, commit, push to the created remote branch(feature-branch) on github and create a pull request.
+- The program needs to guide players along the way and announce the winner if game is won.
 
+## How to install
+
+- Download or clone the repository's files using https://github.com/enaburekhan/Tic-tac-toe-game.git
+- Have Ruby 2.7 installed
+- Once repo is downloaded to local directory in you console 
+- Cd into the local directory and run cmd: main
+- Enjoy the game!
 
 ## Author
 
