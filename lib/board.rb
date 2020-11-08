@@ -1,3 +1,5 @@
+require_relative '../spec/tic-tac-toe_spec.rb'
+
 # Logic defines board attributes
 class Board
   attr_accessor :states
